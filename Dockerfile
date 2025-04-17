@@ -8,7 +8,7 @@ RUN apt-get update && \
 WORKDIR /app
 
 COPY package.json package-lock.json* ./
-RUN npm install --production
+RUN npm install --omit=dev
 
 COPY index.js ./
 
